@@ -1,7 +1,6 @@
 import {apibase} from "@/static/apibase.json"
-
 class API
-  constructor: (@memberState = null) ->
+  constructor: () ->
     @ajaxCounter = 0
     @timeout = null
     $.requestConfig
@@ -20,8 +19,7 @@ class API
         resolve me.ajaxCounter
       , 200
   _getToken: () ->
-    return null if @memberState == null
-    @memberState.getJwtToken()
+    return null
   _request: (type, url, data = null, withToken = true) ->
     me = @
     @ajaxCounter++
@@ -70,6 +68,4 @@ class API
           return
       requestConfig.headers.Authorization = "Bearer #{me._getToken()}" if me._getToken() != null && withToken
       $.request requestConfig
-API = real API
-#API = mock API
-export default new API(memberState)
+export default new API()
