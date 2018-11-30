@@ -16,8 +16,10 @@
     "es6-object-assign": "^1.1.0",
     "es6-promise": "^4.1.1",
     "faker": "^4.1.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
+    "jquery-circle-progress": "^1.2.2",
     "vue": "^2.5.17",
+    "vue-cli": "^2.9.6",
     "vue-router": "^2.7.0",
     "vuex": "^2.4.0"
   },

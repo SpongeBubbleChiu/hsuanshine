@@ -1,4 +1,6 @@
+import 'libs/request.coffee'
 import {apibase} from "@/static/apibase.json"
+import real from 'libs/api/real.coffee'
 class API
   constructor: () ->
     @ajaxCounter = 0
@@ -68,4 +70,5 @@ class API
           return
       requestConfig.headers.Authorization = "Bearer #{me._getToken()}" if me._getToken() != null && withToken
       $.request requestConfig
+API = real API
 export default new API()
