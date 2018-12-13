@@ -1,3 +1,6 @@
+backend_base:
+  resource: "@BackendBaseBundle/Resources/config/routing.yml"
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

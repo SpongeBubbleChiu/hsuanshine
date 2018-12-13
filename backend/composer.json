@@ -1,36 +1,45 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "license": "MIT",
+    "name": "bubble/hsuanshine-project",
+    "license": "proprietary",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-4": {
-            "AppBundle\\": "src/AppBundle"
+            "": "src/"
         },
-        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
-    },
-    "autoload-dev": {
-        "files": [ "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php" ]
+      "classmap": [
+          "app/AppKernel.php",
+          "app/AppCache.php"
+      ]
     },
     "require": {
         "php": ">=5.3.9",
-        "doctrine/doctrine-bundle": "~1.4",
-        "doctrine/orm": "^2.4.8",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "propel/propel-bundle": "^1.5",
-        "sensio/distribution-bundle": "~4.0",
-        "sensio/framework-extra-bundle": "^3.0.2",
-        "symfony/monolog-bundle": "^3.0.2",
-        "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
         "symfony/symfony": "2.8.*",
-        "twig/twig": "^1.0||^2.0"
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.4",
+        "sensio/distribution-bundle": "~5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "propel/propel-bundle": "^1.4",
+        "jms/di-extra-bundle": "1.8.*",
+        "willdurand/faker-bundle": "^1.3",
+        "egulias/email-validator": "^1.2",
+        "guzzlehttp/guzzle": "^6.1",
+        "symfony/assetic-bundle": "^2.7",
+        "intervention/image": "^2.3",
+        "jms/serializer-bundle": "^1.1",
+        "lcobucci/jwt": "^3.1",
+        "craftyshadow/propel-equalnest-behavior": "^1.2",
+        "aws/aws-sdk-php-symfony": "^1.1",
+        "rickysu/tagcache-bundle": "^0.2",
+        "endroid/qr-code": "^2.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
-        "symfony/phpunit-bridge": "~2.7"
+        "symfony/phpunit-bridge": "~2.7",
+        "jolicode/jolinotif": "~1.0"
     },
     "scripts": {
-        "symfony-scripts": [
+        "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
@@ -38,29 +47,29 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
-        "post-install-cmd": [
-            "@symfony-scripts"
-        ],
         "post-update-cmd": [
-            "@symfony-scripts"
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
     "config": {
         "bin-dir": "bin",
+        "component-dir": "web/components",
         "platform": {
-            "php": "5.6"
-        },
-        "sort-packages": true
+            "php": "7.0"
+        }
     },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        },
-        "branch-alias": {
-            "dev-master": "2.8-dev"
+            "file": "app/config/parameters.yml",
+            "keep-outdated": true
         }
     }
 }

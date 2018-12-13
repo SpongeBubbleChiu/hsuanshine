@@ -1,0 +1,9 @@
+/Resources/vue/backend/cm4
+/Resources/vue/backend/node_modules
+/Resources/vue/backend/dist
+/Resources/vue/backend/npm-debug.log
+/Resources/vue/backend/test/unit/coverage
+/Resources/vue/backend/test/e2e/reports
+/Resources/vue/backend/selenium-debug.log
+/Resources/vue/components/config/env/allBundle.json
+/Resources/vue/components/config/env/menuBundle.json
