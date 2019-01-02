@@ -4,7 +4,6 @@ namespace Backend\BaseBundle\Model;
 use Backend\BaseBundle\Model\om\BaseSiteUser;
 use Backend\BaseBundle\Security\SecurityEncoderInterface;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
-use Widget\PhotoBundle\File\PhotoUploadFile;
 
 class SiteUser extends BaseSiteUser implements AdvancedUserInterface, SecurityEncoderInterface
 {

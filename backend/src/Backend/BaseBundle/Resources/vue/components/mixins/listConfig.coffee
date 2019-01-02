@@ -27,7 +27,7 @@ module.exports = {
       @routerChange() if @routerChange != undefined
       return
     updateTitle: () ->
-      @$store.dispatch "pageTitle.update", "menu.#{@modelName()}"
+      @$store.dispatch "pageTitle.update", "#{@modelName()}.menu"
       return
     modelName: () ->
       @$route.name.split('-')[0]

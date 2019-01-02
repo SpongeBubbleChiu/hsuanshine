@@ -1,0 +1,4 @@
+api:
+    resource: "@WidgetPostBundle/Controller/API"
+    type:     annotation
+    prefix:   /api

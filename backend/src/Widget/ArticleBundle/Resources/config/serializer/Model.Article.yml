@@ -1,0 +1,40 @@
+Widget\ArticleBundle\Model\Article:
+    virtual_properties:
+        getId:
+            groups:
+                -               f_detail
+                -               list
+                -               detail
+            serialized_name:    id
+        getType:
+            groups:
+                -               list
+                -               detail
+            serialized_name:    type
+        getTitle:
+            groups:
+                -               f_detail
+                -               detail
+            serialized_name:    title
+        getBrief:
+            groups:
+                -               f_detail
+                -               detail
+            serialized_name:    brief
+        getContent:
+            groups:
+                -               f_detail
+                -               detail
+            serialized_name:    content
+        getCreatedAt:
+            groups:
+                -               f_detail
+                -               list
+                -               detail
+            serialized_name:    created_at
+        getUpdatedAt:
+            groups:
+                -               f_detail
+                -               list
+                -               detail
+            serialized_name:    updated_at

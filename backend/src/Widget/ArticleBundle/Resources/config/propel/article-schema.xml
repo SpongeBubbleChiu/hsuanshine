@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" namespace="Widget\ArticleBundle\Model" defaultIdMethod="native">
+    <table name="article">
+        <column name="id" type="bigint" required="true" primaryKey="true"/>
+        <column name="type" type="varchar" size="255" required="true" />
+        <column name="title" type="varchar" size="255" required="true" primaryString="true" />
+        <column name="brief" type="longvarchar"/>
+        <column name="content" type="longvarchar" required="true" />
+        <unique>
+            <unique-column name="type"/>
+        </unique>
+        <behavior name="timestampable" />
+        <behavior name="addrandompk" />
+        <behavior name="i18n">
+            <parameter name="i18n_columns" value="title, brief, content" />
+        </behavior>
+    </table>
+</database>

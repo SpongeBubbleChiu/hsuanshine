@@ -3,7 +3,6 @@ namespace Backend\BaseBundle\Model\Traits;
 
 trait RoleTrait
 {
-
     public function addCustomRole($role)
     {
         if(!$this->hasCustomRole($role)){

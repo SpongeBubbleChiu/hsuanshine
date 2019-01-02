@@ -1,0 +1,11 @@
+error:
+    article:
+        type:
+            duplicate:              '文章代號不可重複'
+            format_incorrect_field: '文章代號格式不正確'
+        title:
+            missing_field:          '標題為必填'
+        brief:
+            missing_field:          '簡短內容為必填'
+        content:
+            missing_field:          '內文為必填'

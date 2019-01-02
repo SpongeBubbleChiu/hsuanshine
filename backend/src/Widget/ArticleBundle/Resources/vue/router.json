@@ -1,0 +1,17 @@
+[
+  {
+    "path": "/article",
+    "name": "article-list",
+    "component": "components/widgetarticle/router/list.vue"
+  },
+  {
+    "path": "/article/new",
+    "name": "article-new",
+    "component": "components/widgetarticle/router/edit.vue"
+  },
+  {
+    "path": "/article/:id",
+    "name": "article-edit",
+    "component": "components/widgetarticle/router/edit.vue"
+  }
+]

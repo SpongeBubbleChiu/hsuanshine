@@ -21,6 +21,8 @@ class AppKernel extends Kernel
             new Propel\Bundle\PropelBundle\PropelBundle(),
             new Backend\BaseBundle\BackendBaseBundle(),
             new Widget\ArticleBundle\WidgetArticleBundle(),
+            new Widget\PhotoBundle\WidgetPhotoBundle(),
+            new Widget\PostBundle\WidgetPostBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

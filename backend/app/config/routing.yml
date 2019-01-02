@@ -1,3 +1,6 @@
+WidgetPhoto:
+  resource: "@WidgetPhotoBundle/Resources/config/routing.yml"
+
 WidgetArticle:
   resource: "@WidgetArticleBundle/Resources/config/routing.yml"
 

@@ -1,0 +1,10 @@
+{
+  "article.menu": {
+    "icon": "fa fa-book",
+    "role": [
+      "ROLE_ARTICLE_READ",
+      "ROLE_ARTICLE_WRITE"
+    ],
+    "route": "article-list"
+  }
+}
